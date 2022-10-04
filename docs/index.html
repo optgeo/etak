@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"/>
+<script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+</head>
+<body>
+<style>
+body { margin:0; padding:0; font-family: 'Roboto', sans-serif; color: #333333}
+#map { top:0; height: 100vh; width: 100vw; position: fixed; z-index: 0; }
+</style>
+<div id="map"></div>
+<script>
+const map = new maplibregl.Map({
+  container: "map",
+  style: "style.json",
+  hash: true, 
+  center: [24.774, 59.448],
+  zoom: 12,
+  maxZoom: 22
+})
+map.addControl(new maplibregl.NavigationControl())
+map.addControl(new maplibregl.ScaleControl({
+  maxWidth: 200, unit: "metric"
+}))
+</script>
+</body>
+

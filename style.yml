@@ -1,0 +1,32 @@
+version: 8
+name: etak
+
+sources: 
+  v: 
+    type: vector
+    minzoom: 12
+    maxzoom: 12
+    tiles:
+      - >-
+        https://optgeo.github.io/etak/zxy/{z}/{x}/{y}.pbf
+    attribution: Estonian Land Board 2018
+
+layers:
+  - id: e204 # coastline
+    type: line
+    source: v
+    source-layer: e204 
+    paint: 
+      line-color: rgb(20, 90, 255)
+  - id: e203 # watercourse
+    type: line
+    source: v
+    source-layer: e203
+    paint: 
+      line-color: rgb(0, 176, 236)
+  - id: korgus # contour
+    type: line
+    source: v
+    source-layer: korgus
+    paint: 
+      line-color: rgb(200, 160, 60)
