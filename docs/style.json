@@ -12,6 +12,7 @@
       "attribution": "Estonian Land Board 2018"
     }
   },
+  "glyphs": "https://gsi-cyberjapan.github.io/optimal_bvmap/glyphs/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "e204",
@@ -38,6 +39,25 @@
       "source-layer": "korgus",
       "paint": {
         "line-color": "rgb(200, 160, 60)"
+      }
+    },
+    {
+      "id": "korgus-label",
+      "type": "symbol",
+      "source": "v",
+      "source-layer": "korgus",
+      "paint": {
+        "text-color": "rgb(200, 160, 60)"
+      },
+      "layout": {
+        "text-font": [
+          "NotoSansJP-Regular"
+        ],
+        "text-field": [
+          "get",
+          "KORGUS"
+        ],
+        "text-size": 9
       }
     }
   ]

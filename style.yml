@@ -11,6 +11,9 @@ sources:
         https://optgeo.github.io/etak/zxy/{z}/{x}/{y}.pbf
     attribution: Estonian Land Board 2018
 
+glyphs: >-
+  https://gsi-cyberjapan.github.io/optimal_bvmap/glyphs/{fontstack}/{range}.pbf
+
 layers:
   - id: e204 # coastline
     type: line
@@ -30,3 +33,16 @@ layers:
     source-layer: korgus
     paint: 
       line-color: rgb(200, 160, 60)
+  - id: korgus-label # contour label
+    type: symbol
+    source: v
+    source-layer: korgus
+    paint: 
+      text-color: rgb(200, 160, 60)
+    layout:
+      text-font: 
+        - NotoSansJP-Regular
+      text-field: 
+        - get
+        - KORGUS
+      text-size: 9
